@@ -16,41 +16,69 @@ export const Skills = () => {
 
   const skillGroups = [
     {
-         id: "frontend", 
+      id: "frontend",
       title: t("skills.frontend"),
       icon: "brush",
       bg: "bg-[#eef0e8]",
       accent: "text-[#535845]",
       pill: "bg-[#d8dccf] text-[#3a3d30]",
       pillHover: "hover:bg-[#c4c9b1]",
-      items: ["React", "JavaScript", "HTML/CSS", "Tailwind", "Vite"],
+      items: [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS",
+        "Bootstrap",
+        "Tailwind",
+        "Vite",
+      ],
     },
     {
-      id: "backend",  
+      id: "backend",
       title: t("skills.backend"),
       icon: "terminal",
       bg: "bg-[#ede8e3]",
       accent: "text-[#6b4f3a]",
       pill: "bg-[#d4c4b8] text-[#4a3326]",
       pillHover: "hover:bg-[#c0aa9a]",
-      items: ["Node.js", "Python", "PHP", "MySQL", "Java", "C#"],
+      items: [
+        "Python",
+        "Flask",
+        "PHP",
+        "Node.js",
+        "C#",
+        "ASP.NET",
+        "APIs REST",
+        "OAuth 2.0",
+        "JWT",
+        "Docker",
+      ],
     },
     {
-          id: "tools",     
+      id: "database",
+      title: t("skills.database"),
+      icon: "storage",
+      bg: "bg-[#ede3e3]",
+      accent: "text-[#7a3a3a]",
+      pill: "bg-[#d4b8b8] text-[#4a2626]",
+      pillHover: "hover:bg-[#c4a0a0]",
+      items: ["MySQL", "PostgreSQL", "SQLAlchemy", "Entity Framework"],
+    },
+    {
+      id: "tools",
       title: t("skills.tools"),
       icon: "build",
       bg: "bg-[#f0eeea]",
       accent: "text-[#46473f]",
       pill: "bg-[#d8d6d2] text-[#2e2f2a]",
       pillHover: "hover:bg-[#c4c2be]",
-      items: ["Git", "GitHub", "Figma", "Android Studio", "ASP.NET"],
+      items: ["Git", "GitHub", "Figma", "Android Studio", "i18n"],
     },
   ];
-
   return (
     <section id="skills" className="py-24 bg-surface-container-low">
       <div className="px-6 md:px-12 max-w-7xl mx-auto">
-
         <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +96,7 @@ export const Skills = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-4 gap-6"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -76,12 +104,19 @@ export const Skills = () => {
         >
           {skillGroups.map((group) => (
             <motion.div
-key={group.id}               variants={cardVariant}
+              key={group.id}
+              variants={cardVariant}
               className={`rounded-2xl p-10 border border-black/10 ${group.bg} hover:-translate-y-1 transition-transform duration-300 flex flex-col gap-8`}
             >
               <div className="flex items-center gap-3">
-                <span className={`material-symbols-outlined text-xl ${group.accent}`}>{group.icon}</span>
-                <h3 className={`font-headline italic text-2xl ${group.accent}`}>{group.title}</h3>
+                <span
+                  className={`material-symbols-outlined text-xl ${group.accent}`}
+                >
+                  {group.icon}
+                </span>
+                <h3 className={`font-headline italic text-2xl ${group.accent}`}>
+                  {group.title}
+                </h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((skill) => (
@@ -96,7 +131,6 @@ key={group.id}               variants={cardVariant}
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

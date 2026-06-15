@@ -28,7 +28,9 @@
     "title": "Skills",
     "frontend": "Frontend",
     "backend": "Backend",
-    "tools": "Tools"
+    "tools": "Tools",
+      "database": "Databases"
+
   },
   "projects": {
     "label": "Portfolio",

@@ -28,7 +28,9 @@
     "title": "Habilidades",
     "frontend": "Frontend",
     "backend": "Backend",
-    "tools": "Herramientas"
+    "tools": "Herramientas",
+      "database": "Bases de datos"
+
   },
   "projects": {
     "label": "Portafolio",
