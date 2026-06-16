@@ -87,7 +87,9 @@
     "send": "Enviar mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado! Te responderé lo antes posible.",
-    "error": "Hubo un error. Inténtalo de nuevo."
+    "error": "Hubo un error. Inténtalo de nuevo.",
+   "download_cv": "Descargar CV"
+
   },
   "footer": {
     "made_with": "Made with"
